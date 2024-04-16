@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "survey.css">
+    <script src = "survey.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>survey</title>
+</head>
+
+<body onload="mouseMove()">
+    <!-- mouse blur -->
+    <div id="blob"></div>
+    <div id="blur"></div>
+
+    <div id = "head-container">
+        <h1 id = "title"> Survey Form </h1>
+        <p id = "description"> Thank you for taking our survey</p>
+    </div>
+    <div  id = "form-container">
+        <form id = "survey-form">
+            <!-- name -->
+        <div class = "flex-box">
+            <label for = "name" id = "name-label">Name:</label>
+            <input class = "text-input" id = "name" type = "text" name = "fname" required placeholder="Enter your name here" required>
+        </div>
+            <!-- email -->
+        <div class = "flex-box">
+            <label for = "email" id = "email-label">E-mail:</label>
+            <input class = "text-input" id = "email" type = "email" name = "email-Field"required placeholder="Enter your email here" required >
+        </div>
+            <!-- number -->
+        <div class = "flex-box">
+            <label  for = "number" id = "number-label">Age:</label>
+            <input class = "text-input" id = "number" type = "number" required min = "1" max = "120" required placeholder="Enter your age" required>
+        </div>
+            <!-- drop down -->
+        <div class = "flex-box">
+            <label for = "dropdown">What is your favorite color: </label>
+            <select class = "text-input" id = "dropdown" value = "select an option">
+                <option disabled value="select">please select an option</option>
+                <option value="blue">Blue</option>
+                <option value = "red">Red</option>
+                <option value = "green">Green</option>
+            </select>
+        </div>
+            <!-- radio btns -->
+            <hr>
+        <div id = "flex-box">
+            <h3>Mac or Windows?</h3>
+        <div class = "radio-flex">
+            <label for="radio-1">Mac</label>
+            <input type = "radio" id = "radio-1" value="mac" name="radio">
+        </div>
+        <div class = "radio-flex">
+            <label for="radio-2">Windows</label>
+            <input type = "radio" id = "radio-2" value="windows" name="radio">
+        </div>
+        </div>
+            <hr>
+            <!-- check boxes -->
+        <div id = "flex-box">  
+            <h3>Check all skills that apply to you: </h3>
+            <label for ="check-1">Java</label> 
+            <input type="checkbox" id = "check-1" value="java">
+            <label for ="check-2">C</label>
+            <input type="checkbox" id = "check-2" value="c">
+            <label for ="check-3">Python</label>
+            <input type="checkbox" id = "check-3" value="python">
+            <label for ="check-4">C++</label>
+            <input type="checkbox" id = "check-4" value="c++">
+            <label for ="check-5">Visual Basic.NET</label>
+            <input type="checkbox" id = "check-5" value=".net">
+            <label for ="check-6">Javascript</label>
+            <input type="checkbox" id = "check-6" value="javascript">
+            <label for ="check-7">C#</label>
+            <input type="checkbox" id = "check-7" value="c#">
+            <label for ="check-8">PHP</label>
+            <input type="checkbox" id = "check-8" value="php">
+            <label for ="check-9">SQL</label>
+            <input type="checkbox" id = "check-9" value="sql">
+            <label for ="check-10">Objective-C</label>
+            <input type="checkbox" id = "check-10" value="obj-c">
+        </div>
+            <hr>
+        <div id = "comment-container">
+            <!-- <label for = "text">Additional comments</label> -->
+            <textarea id = "comments" required placeholder="Additional comments..."></textarea>
+        </div>
+        <div id = "submit-btn">
+            <button id = "button" type="submit">Submit</button>
+        </div>
+        </form>
+        
+    </div>
+</body>
